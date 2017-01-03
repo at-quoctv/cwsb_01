@@ -38,7 +38,7 @@ class Booking < ApplicationRecord
   scope :have_order, -> do
     where.not order_id: nil
   end
-
+  
   scope :recent, -> {order(created_at: :desc)}
 
   scope :group_by_order, -> state do

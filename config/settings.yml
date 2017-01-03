@@ -81,6 +81,8 @@ admin:
     per_page: 50
   january: 1
   december: 12
+  spaces: "spaces"
+  bookings: "bookings"
 precision_number: 0
 data_slider_min: 1
 data_slider_max: 1000

@@ -38,6 +38,12 @@ class Venue < ApplicationRecord
   accepts_nested_attributes_for :working_times, allow_destroy: true
 
   scope :order_created, ->{order created_at: :desc}
+ 
+  scope :count_spaces, -> do
+    joins(:spaces)
+      .select("count(*) as quantities, venues.*")
+      .group :venue_id
+  end
 
   def create_user_role_venue
     user_role_venues.create user: user, type_role: Settings.owner_role

@@ -737,3 +737,12 @@ en:
     activity_booking_create: "Booking space"
     activity_request_booking: "Requested booking"
     booking_deleted: "added the project that is currently deleted."
+    system_statistics:
+      index:
+        header: "System Statistics"
+        space_chart: "Space Chart"
+        booking_chart: "Booking Chart"
+      column_chart: "Column Chart"
+      pie_chart: "Pie Chart"
+      line_chart: "Line Chart"
+      title: "System Statistics"

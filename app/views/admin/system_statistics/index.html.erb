@@ -1,0 +1,32 @@
+<%= provide :title, t("admin.system_statistics.title") %>
+<%= javascript_include_tag "admin/system_statistics.js" %>
+<script src="http://code.highcharts.com/modules/exporting.js"></script>
+<div class="row full-height margin-left-0 margin-right-0">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="content-header margin-left-0 margin-right-0">
+      <div class="header-section" id="section">
+        <h1><%= t ".header" %></h1>
+      </div>
+    </div>
+    <div class="block custom-block">
+      <div class="block-title margin-left-0 margin-right-0 padding-0-15">
+        <ul class="nav nav-tabs height-45" data-toggle="tabs">
+          <li class="active">
+            <%= link_to t(".space_chart"), "#space_chart", remote: true %>
+          </li>
+          <li>
+            <%= link_to t(".booking_chart"), "#booking_chart", remote: true %>
+          </li> 
+        </ul>
+      </div>
+      <div class="tab-content">
+        <div class="tab-pane active" id="space_chart">
+          <%= render "space_count_of_venue_chart" %>
+        </div>
+        <div class="tab-pane" id="booking_chart">
+          <%= render "booking_count_of_space_chart" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
